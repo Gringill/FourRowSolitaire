@@ -1335,11 +1335,16 @@ public class SolitaireBoard extends JFrame
                         for(int k = temp.length() - 1; k >= 0; k--)
                         {
                             Card card = temp.getCardAtLocation(k);
-
+                            Card underneath = null;
+                            if(k < temp.length() - 1) {
+                            	underneath = temp.getCardAtLocation(k + 1);
+                            }
+                            
                             if(((destination instanceof AcePile) && card.getSuit().equals(((AcePile)destination).getSuit())
                                     && card.getNumber() == (destination.peek().getNumber() + 1) && k == 0) ||
                                     (!(destination instanceof AcePile) && card.getColor() != destination.peek().getColor()
-                                    && card.getNumber() == destination.peek().getNumber() - 1))
+                                    && card.getNumber() == destination.peek().getNumber() - 1
+                                    && (underneath == null || (underneath.getNumber() != destination.peek().getNumber()))))
                             {
                                 String hintString = "Move the ";
 
