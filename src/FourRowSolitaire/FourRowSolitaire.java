@@ -1,6 +1,7 @@
 /*
     This file is a part of Four Row Solitaire
 
+
     Copyright (C) 2010 by Matt Stephen
 
     Four Row Solitaire is free software: you can redistribute it and/or modify

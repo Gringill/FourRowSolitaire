@@ -86,6 +86,8 @@ public class SolitaireBoard extends JFrame
     private LinkedList<CardStack> destinationList = new LinkedList<CardStack>();
     private LinkedList<Integer> numCards = new LinkedList<Integer>();
     private LinkedList<Integer> numCardsInDiscardView = new LinkedList<Integer>();
+    
+    private WinScreen winScr;
 
     public SolitaireBoard()
     {
@@ -1486,7 +1488,8 @@ public class SolitaireBoard extends JFrame
 
             if(winAnimationStatus != 0 || winSoundsStatus != 0)
             {
-                new WinScreen(winAnimationStatus, winSoundsStatus);
+                winScr = new WinScreen(winAnimationStatus, winSoundsStatus);
+            	setVisible(false);
             }
 
             int playAgain = JOptionPane.showConfirmDialog(SolitaireBoard.this, "Play Again?", "You Won!", JOptionPane.YES_NO_OPTION);
@@ -1495,6 +1498,8 @@ public class SolitaireBoard extends JFrame
             {
                 recordGame(GAME_WON);
                 newGame(GAME_WON);
+                winScr.turnOff();
+                setVisible(true);
             }
             else//(playAgain == JOptionPane.NO_OPTION)
             {

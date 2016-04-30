@@ -19,6 +19,8 @@
 
 package FourRowSolitaire;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 //import java.awt.Dialog;
 import java.awt.event.*;
 import java.io.File;
@@ -34,6 +36,10 @@ import javax.swing.event.MouseInputAdapter;
  * Description: The WinScreen class manages the win animation and sounds window.
  * 
  * @author Matt Stephen
+ */
+/**
+ * @author Brenden
+ *
  */
 public class WinScreen extends JFrame
 {
@@ -52,14 +58,14 @@ public class WinScreen extends JFrame
 
         if(sounds == 1)
         {
-            setSize(200,200);
+            setSize(200,100);
             sound = new SoundThread();
             sound.run();
         }
 
         if(animation == 1)
         {
-            setSize(800,600);
+            setSize(800,700);
 
             FireworksDisplay fw = new FireworksDisplay(100,200);
             add(fw);
@@ -68,7 +74,11 @@ public class WinScreen extends JFrame
         }
         else
         {
-            this.setLocation(0,0);
+           Toolkit tk = Toolkit.getDefaultToolkit();
+           Dimension screenSize = tk.getScreenSize();
+           int screenHeight = screenSize.height;
+           int screenWidth = screenSize.width;
+           this.setLocation(screenWidth / 2, screenHeight / 4);
             add(new JLabel("Click Here to Stop Music"));
         }
 
@@ -95,6 +105,15 @@ public class WinScreen extends JFrame
                 WinScreen.this.requestFocus();
             }
         });
+    }
+    
+    public void turnOff() {
+    	if(sound != null && sound.sequencer.isRunning())
+        {
+            sound.sequencer.stop();
+        }
+
+        WinScreen.this.dispose();
     }
 
     private class SoundThread extends Thread
