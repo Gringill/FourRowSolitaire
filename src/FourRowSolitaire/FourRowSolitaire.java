@@ -450,7 +450,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
             "\nGames Won: " + gamesWon1h + "\t\t\tGames Won: " + gamesWon3h + "\n" +
             "Win Percentage: " + winPercentage1h + "%\t\tWin Percentage: " + winPercentage3h +
             "%\n\nBest Streak: " + winStreak1h + "\t\t\tBest Streak: " + winStreak3h + "\n" +
-            "Worst Streak: " + lossStreak1h + "\t\tWorst Streak: " + lossStreak3h + "\n" +
+            "\tWorst Streak: " + lossStreak1h + "\t\tWorst Streak: " + lossStreak3h + "\n" +
             "Current Streak: " + currentStreak1h + "\t\tCurrent Streak: " + currentStreak3h);
 
             display.setOpaque(false);
