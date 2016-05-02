@@ -1213,9 +1213,11 @@ public class SolitaireBoard extends JFrame
                 }
                 else
                 {
-                    for (int i = 0; i < num; i++) {
-                    	tempSource.addCard(tempDest.pop());
+                	CardStack temp = new CardStack();
+                	for (int i = 0; i < num; i++) {
+                    	temp.addCard(tempDest.pop());
 					}
+                    tempSource.addStack(temp);
                 }
 
                 discardPile.setView(numDiscard);
