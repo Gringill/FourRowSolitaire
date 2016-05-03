@@ -430,10 +430,10 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
             JTextArea display = new JTextArea();
             display.append("One-Card Draw (Easy)\t\tThree-Card Draw (Easy)\n" +
             "Games Played: " + gamesPlayed1e + "\t\tGames Played: " + gamesPlayed3e +
-            "\nGames Won: " + gamesWon1e + "\t\tGames Won: " + gamesWon3e + "\n" +
+            "\nGames Won: " + gamesWon1e + "\t\t\tGames Won: " + gamesWon3e + "\n" +
             "Win Percentage: " + winPercentage1e + "%\t\tWin Percentage: " + winPercentage3e +
             "%\n\nBest Streak: " + winStreak1e + "\t\t\tBest Streak: " + winStreak3e + "\n" +
-            "Worst Streak: " + lossStreak1e + "\t\tWorst Streak: " + lossStreak3e + "\n" +
+            "Worst Streak: " + lossStreak1e + "\t\t\tWorst Streak: " + lossStreak3e + "\n" +
             "Current Streak: " + currentStreak1e + "\t\tCurrent Streak: " + currentStreak3e + "\n" +
             "===================================================================\n");
 
@@ -451,7 +451,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
             "\nGames Won: " + gamesWon1h + "\t\t\tGames Won: " + gamesWon3h + "\n" +
             "Win Percentage: " + winPercentage1h + "%\t\tWin Percentage: " + winPercentage3h +
             "%\n\nBest Streak: " + winStreak1h + "\t\t\tBest Streak: " + winStreak3h + "\n" +
-            "Worst Streak: " + lossStreak1h + "\t\tWorst Streak: " + lossStreak3h + "\n" +
+            "Worst Streak: " + lossStreak1h + "\t\t\tWorst Streak: " + lossStreak3h + "\n" +
             "Current Streak: " + currentStreak1h + "\t\tCurrent Streak: " + currentStreak3h);
 
             display.setOpaque(false);
