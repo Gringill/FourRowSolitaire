@@ -430,7 +430,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
             JTextArea display = new JTextArea();
             display.append("One-Card Draw (Easy)\t\tThree-Card Draw (Easy)\n" +
             "Games Played: " + gamesPlayed1e + "\t\tGames Played: " + gamesPlayed3e +
-            "\nGames Won: " + gamesWon1e + "\t\t\tGames Won: " + gamesWon3e + "\n" +
+            "\nGames Won: " + gamesWon1e + "\t\tGames Won: " + gamesWon3e + "\n" +
             "Win Percentage: " + winPercentage1e + "%\t\tWin Percentage: " + winPercentage3e +
             "%\n\nBest Streak: " + winStreak1e + "\t\t\tBest Streak: " + winStreak3e + "\n" +
             "Worst Streak: " + lossStreak1e + "\t\tWorst Streak: " + lossStreak3e + "\n" +
